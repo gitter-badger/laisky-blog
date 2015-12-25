@@ -30,7 +30,8 @@ $(function() {
                     $hintText.addClass("label-success");
                     $hintText.html("登陆成功，正在跳转");
                     setTimeout(function() {
-                        location.href = "/archives/?page=1";
+                        var redirectTo = QueryString['next'];
+                        location.href = redirectTo;
                         // TODO 还没实现 popStat
                         // if(history.length == 0) {
                         //     location.href = "/archives/?page=1";
