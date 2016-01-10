@@ -63,7 +63,7 @@ class PostApiHandler(BaseApiHandler):
             limit = int(self.get_argument('limit', default='15', strip=True))
             skip = int(self.get_argument('skip', default='0', strip=True))
             plaintext = self.get_argument('plaintext', default='false', strip=True)
-            truncate = int(self.get_argument('truncate', default='0', strip=True))
+            truncate = int(self.get_argument('truncate', default='100', strip=True))
             assert(sort in ['des', 'asc'])
             assert(limit > 0)
             assert(skip >= 0)
